@@ -5,8 +5,15 @@ const blogData = JSON.parse(fs.readFileSync(blogs, "utf-8"));
 
 const getAllBlogs = (req, res) => {
   let blog = blogData.find((blogs) => {
-    res.status(200).json({ blogData });
+    return Object.keys(req.query).every((property) => {
+      return blog[property] == req.query[property];
+    });
+    // res.status(200).json({
+    //   message:"Successful",
+    //   blog:blog,
+    // });
   });
+  res.status(200).json(blogData);
 };
 const getBlogByID = (req, res) => {
   console.log(req.params);
