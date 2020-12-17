@@ -10,6 +10,7 @@
 
 - **routes** this folder contains file - **blogroute.js** which has the Router all the routes for getting a blog or adding a posting blog a blog to file
 - **controller** in this folder we have **blogcontroller.js** in which we have all the middle ware for processing the routes which are then exported and and used in routes
+- **data** this folder contain **blogData.json** in which all the file read wirte operations are performed and data is stored
 
 # DEMO
 
