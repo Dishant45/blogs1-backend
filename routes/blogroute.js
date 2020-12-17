@@ -4,12 +4,12 @@ const {
   getAllBlogs,
   getBlogByID,
   createNewBLog,
-  updateBLogById,
+  // updateBLogById,
 } = require("../controllers/blogcontroller");
 
 router.route("/allblogs").get(getAllBlogs);
 router.route("/:id").get(getBlogByID);
 router.route("/addnewblog").post(createNewBLog);
-router.route("/updateblog").patch(updateBLogById);
+// router.route("/:updateblogid").patch(updateBLogById);
 
 module.exports = router;
